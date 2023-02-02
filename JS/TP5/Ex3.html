@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+    <img src="Union.png" alt="Union" id="imgU" style="display: block; margin-bottom: 20px;"/> 
+    <button id="btn">Click me !! </button> 
+    <button id="btnStyle">Change style page ! </button> 
+    <button id="btnRese">Reset style ! </button>
+    <img src="Bruschetta.jpg" alt="Union" id="imgP" width="200" height="200" style="display: block; margin-top: 20px; margin-bottom: 20px;"/>
+    <button id="clear">Clean window</button>
+</head>
+<body>
+    
+</body>
+<script>
+    window.onload = () => (
+        alert('La page charger !!')
+    );
+    
+    document.getElementById('imgU').onmouseenter = () => (
+        alert('Mouse Enter !!')
+    );
+
+    document.getElementById('btn').onclick = () => (
+        alert('Btn Clicked !!')
+    );
+
+    document.getElementById('btnStyle').onclick = () => (
+        document.body.style.backgroundColor  = 'red',
+        document.getElementById('btnStyle').style.color = 'white'
+    );
+
+    document.getElementById('btnRese').onclick = () => (
+        document.body.removeAttribute('style'),
+        document.getElementById('btnStyle').removeAttribute('style')
+    );
+
+    document.getElementById('imgP').onmouseover = () => (
+        document.getElementById('imgP').setAttribute('src','Union.png')
+    );
+
+    document.getElementById('imgP').onmouseleave = () => (
+        document.getElementById('imgP').setAttribute('src','Bruschetta.jpg')
+    );
+
+    document.getElementById('clear').onclick = () => (
+        document.write()
+    );
+
+</script>
+</html>

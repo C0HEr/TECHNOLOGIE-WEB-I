@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript DOM</title>
+  </head>
+  <body>
+    <p id="text">Ce paragraphe sera modifié</p>
+    <div>
+      <button id="jsstyle" onclick="js_style()">Style</button>
+    </div>
+  </body>
+  <script>
+    function js_style() {
+        let styles = "font-size:18px;color:red;font-family:'Arial'";
+        document.getElementById("text").style = styles;
+    }
+  </script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 4 </title>
+</head>
+<body>
+    <div>
+        <img alt="Slider" id="mySlider" width="400" height="400" style="margin-bottom: 20px; display: block;">
+        <button id="prev" onclick="prev()">Pressident</button>
+        <button id="next" onclick="next()">Suivant</button>
+    </div>
+</body>
+<script>
+    const listImg = ["Bruschetta.jpg","Bruschetta.webp","dessert.jpeg","Union.png"],
+        count = listImg.length,
+        mySlider = document.getElementById('mySlider');
+    let slideItem = 0;
+    
+    window.onload = () => {
+        mySlider.setAttribute('src',listImg[slideItem])
+    }
+
+    const prev = () => {
+        slideItem = slideItem > 0 ? ( -- slideItem  ) : count - 1 ;
+        mySlider.setAttribute('src',listImg[slideItem])
+    }
+
+    const next = () => {
+        slideItem = slideItem < count - 1 ? ( ++ slideItem ) : 0;
+        mySlider.setAttribute('src',listImg[slideItem])
+    }
+
+
+</script>
+</html>
